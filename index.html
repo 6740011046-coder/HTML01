@@ -2,88 +2,170 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Event Registration Form</title>
+  <title>Online Store</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f6f8;
+    }
+
+    
+    header {
+      background: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      color: #1e88e5;
+      border-bottom: 2px solid #1e88e5;
+      padding-bottom: 4px;
+    }
+
+    
+    section {
+      padding: 30px 40px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+   
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .price {
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .card p {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .card button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #1e88e5;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+
 </head>
 <body>
 
-  <h1>โจทย์ท้าทาย HTML</h1>
-  <h2>สร้างแบบฟอร์มลงทะเบียนกิจกรรม</h2>
-  <p>
-    คุณได้รับมอบหมายให้สร้างหน้าลงทะเบียนกิจกรรมที่สมบูรณ์และใช้งานง่ายโดยใช้ HTML เท่านั้น.
-  </p>
+  
+  <header>
+    <h1>ONLINE STORE</h1>
+    <nav>
+      <a class="active" href="#">HOME</a>
+      <a href="#">BEST SELLERS</a>
+      <a href="#">NEW ARRIVALS</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </header>
 
-  <form>
+  
+  <section>
+    <h2>BEST SELLERS</h2>
 
-    <fieldset>
-      <legend><strong>Personal Information</strong></legend>
+    <div class="product-grid">
+      <div class="card">
+        <img src="p.jpg">
+        <h3>iPhone 17 Pro max</h3>
+        <p class="ราคา">ราคา: 48,900฿</p>
+        <p>iPhone</p>
+        <button>เพิ่มลงตะกร้า</button>
+      </div>
 
-      <label>
-        ชื่อเต็ม:
-        <input type="text" placeholder="กรอกชื่อเต็มของคุณ">
-      </label>
-      <br><br>
+      <div class="card">
+        <img src="a.jpg">
+        <h3>AirPods Pro</h3>
+        <p class="ราคา">ราคา: 8,490฿</p>
+        <p>AirPods</p>
+        <button>เพิ่มลงตะกร้า</button>
+      </div>
 
-      <label>
-        Email:
-        <input type="email" placeholder="ใส่อีเมลของคุณ" required>
-      </label>
-      <br><br>
+      <div class="card">
+        <img src="pa.jpg">
+        <h3>iPad Pro</h3>
+        <p class="ราคา">ราคา: 35,900฿</p>
+        <p>iPad.</p>
+        <button>เพิ่มลงตะกร้า</button>
+      </div>
+    </div>
+  </section>
 
-      <label>
-        หมายเลขโทรศัพท์:
-        <input type="tel" placeholder="ใส่หมายเลขโทรศัพทืของคุณ" required>
-      </label>
-      <br><br>
+  
+  <section>
+    <h2>NEW ARRIVALS</h2>
 
-      <label>
-        วันเกิด:
-        <input type="date">
-      </label>
-      <br><br>
+     <div class="product-grid">
+      <div class="card">
+        <img src="p.jpg">
+        <h3>iPhone 17 Pro max</h3>
+        <p class="ราคา">ราคา: 48,900฿</p>
+        <p>iPhone</p>
+        <button>เพิ่มลงตะกร้า</button>
+      </div>
 
-      เพศ:
-      <label><input type="radio" name="gender"> ชาย</label>
-      <label><input type="radio" name="gender"> หญิง</label>
-      <label><input type="radio" name="gender"> อื่นๆ</label>
+      <div class="card">
+        <img src="w.jpg">
+        <h3>Apple Watch </h3>
+        <p class="price">ราคา: 8,500฿</p>
+        <p>Apple Watch</p>
+        <button>ADD TO CART</button>
+      </div>
 
-    </fieldset>
-
-    <br>
-
-    <fieldset>
-      <legend><strong>รายละเอียดกิจกรรม</strong></legend>
-
-      กิจกรรมที่น่าสนใจ:
-      <label><input type="checkbox"> วิ่ง</label>
-      <label><input type="checkbox"> ปั่นจักรยาน</label>
-      <label><input type="checkbox"> โยคะ</label>
-      <br><br>
-
-      <label>
-        ระดับประสบการณ์:
-        <select>
-          <option>ระดับเริ่มต้น</option>
-          <option>ระดับกลาง</option>
-          <option>ผู้เชี่ยวชาญ</option>
-        </select>
-      </label>
-      <br><br>
-
-      <label>
-        ความคิดเห็น:
-        <br>
-        <textarea rows="4" cols="40"
-          placeholder="Share any additional feedback or questions...">
-        </textarea>
-      </label>
-
-    </fieldset>
-
-    <br>
-
-    <button type="submit">ลงทะเบียนตอนนี้</button>
-
-  </form>
+       <div class="card">
+        <img src="pa.jpg">
+        <h3>iPad Pro</h3>
+        <p class="ราคา">ราคา: 35,900฿</p>
+        <p>iPad</p>
+        <button>เพิ่มลงตะกร้า</button>
+      </div>
+    </div>
+  </section>
+    </div>
+  </section>
 
 </body>
 </html>
