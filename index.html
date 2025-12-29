@@ -1,46 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+  <meta charset="UTF-8">
+  <title>Event Registration Form</title>
 </head>
-<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+<body>
 
-  <div class="bg-white p-6 rounded-lg shadow-lg w-[600px]">
-    
-   
-    <h1 class="text-3xl font-bold mb-4">
-      h: YOSSAPAT
-    </h1>
+  <h1>โจทย์ท้าทาย HTML</h1>
+  <h2>สร้างแบบฟอร์มลงทะเบียนกิจกรรม</h2>
+  <p>
+    คุณได้รับมอบหมายให้สร้างหน้าลงทะเบียนกิจกรรมที่สมบูรณ์และใช้งานง่ายโดยใช้ HTML เท่านั้น.
+  </p>
 
-    <p class="mb-6 text-gray-700">
-      Hello, my name is Yosaphat. I am someone who enjoys learning new things and constantly improving myself.
-    </p>
-    <div class="flex gap-6">
-      
-      <img 
-        src="profile.jpg" alt="Profile" width="150" height="150">
+  <form>
 
-      
-      <div>
-        <h2 class="text-xl font-semibold mb-2">
-          22. My Hobbies:
-        </h2>
-        <ul class="list-disc ml-5 space-y-1">
-          <li>Listen to music</li>
-          <li>Play games</li>
-          <li>Talk to friends</li>
-        </ul>
-      </div>
+    <fieldset>
+      <legend><strong>Personal Information</strong></legend>
 
-    </div>
-    <a 
-      href="https://mail.google.com/mail/u/0/#inbox"
-      class="text-blue-600 underline mt-6 inline-block"
-    >
-      My Gmail
-    </a>
+      <label>
+        ชื่อเต็ม:
+        <input type="text" placeholder="กรอกชื่อเต็มของคุณ">
+      </label>
+      <br><br>
 
-  </div>
+      <label>
+        Email:
+        <input type="email" placeholder="ใส่อีเมลของคุณ" required>
+      </label>
+      <br><br>
+
+      <label>
+        หมายเลขโทรศัพท์:
+        <input type="tel" placeholder="ใส่หมายเลขโทรศัพทืของคุณ" required>
+      </label>
+      <br><br>
+
+      <label>
+        วันเกิด:
+        <input type="date">
+      </label>
+      <br><br>
+
+      เพศ:
+      <label><input type="radio" name="gender"> ชาย</label>
+      <label><input type="radio" name="gender"> หญิง</label>
+      <label><input type="radio" name="gender"> อื่นๆ</label>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend><strong>รายละเอียดกิจกรรม</strong></legend>
+
+      กิจกรรมที่น่าสนใจ:
+      <label><input type="checkbox"> วิ่ง</label>
+      <label><input type="checkbox"> ปั่นจักรยาน</label>
+      <label><input type="checkbox"> โยคะ</label>
+      <br><br>
+
+      <label>
+        ระดับประสบการณ์:
+        <select>
+          <option>ระดับเริ่มต้น</option>
+          <option>ระดับกลาง</option>
+          <option>ผู้เชี่ยวชาญ</option>
+        </select>
+      </label>
+      <br><br>
+
+      <label>
+        ความคิดเห็น:
+        <br>
+        <textarea rows="4" cols="40"
+          placeholder="Share any additional feedback or questions...">
+        </textarea>
+      </label>
+
+    </fieldset>
+
+    <br>
+
+    <button type="submit">ลงทะเบียนตอนนี้</button>
+
+  </form>
 
 </body>
 </html>
